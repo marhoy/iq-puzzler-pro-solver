@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "iqpuzzlesolver"
+version = "0.1.0"
+description = ""
+authors = ["Martin Høy <marhoy@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "^1.17"
+matplotlib = "^3.1"
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
