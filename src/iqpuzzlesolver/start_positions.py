@@ -1,14 +1,16 @@
 import numpy as np
 from iqpuzzlesolver import pieces
 
-n_rows = 5
-n_cols = 11
+
+def empty_grid():
+    n_rows, n_cols = 5, 11
+    return np.zeros((n_rows, n_cols), dtype=np.uint8)
 
 
 def start_position(num):
     if num == 0:
         # Return an empty grid and all pieces
-        grid = np.zeros((n_rows, n_cols), dtype=np.uint8)
+        grid = empty_grid()
         available_pieces = [
             pieces.pink(),
             pieces.red(),
@@ -27,7 +29,7 @@ def start_position(num):
 
     if num == 1:
         # Starting position 1
-        grid = np.zeros((n_rows, n_cols), dtype=np.uint8)
+        grid = empty_grid()
         grid[:, :7] = 1
         grid[0, :9] = 1
         grid[3, :8] = 1
@@ -43,7 +45,7 @@ def start_position(num):
 
     if num == 25:
         # Starting position 25
-        grid = np.zeros((n_rows, n_cols), dtype=np.uint8)
+        grid = empty_grid()
         grid[0, :] = 15
         grid[1, [0, 1, 4, 5, 6, 8, 9, 10]] = 15
         grid[2, [0, 1, 5]] = 15

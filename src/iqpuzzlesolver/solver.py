@@ -23,8 +23,8 @@ def solve(grid, pieces):
                 # This piece can be placed in this position
                 # Do that and call ourselves with the resulting grid
                 newgrid = grid.copy()
-                newgrid[r:r + variant.shape[0],
-                c:c + variant.shape[1]] += variant
+                newgrid[r:r + variant.shape[0], c:c + variant.shape[1]] \
+                    += variant
 
                 #  print("{}Placing piece {}, variant {} at {}, {}".format(
                 #  '    '*(2-len(my_pieces)), variant.max(), i, r, c))
